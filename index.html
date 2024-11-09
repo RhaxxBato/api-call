@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <blockquote id="quote"></blockquote>
+        <cite id="author"></cite>
+        <div id="loading" class="loading">Loading...</div>
+        <button id="new-quote">Get New Quote</button>
+        <div class="social-share">
+            <a id="share-quote-twitter" href="https://twitter.com/intent/tweet?text=${quotedText}" target="Twitter">Share on Twitter</a>
+            <a id="share-quote-facebook" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://animechan.io/api/v1/quotes/random`)}&quote=${quotedText}" target="Facebook">Share on Facebook</a>
+            <a id="share-quote-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://animechan.io/api/v1/quotes/random`)}&title=${quotedText}" target="LinkedIn">Share on LinkedIn</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
